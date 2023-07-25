@@ -1,4 +1,4 @@
-This is a custom version of D4RL, modified to suite my work and experiments.
+This is a custom version of D4RL, modified to suit my work and experiments.
 This list contains the changes I made:
 1) Modified the camera view for point navigation environment (d4rl/pointmaze/maze_model.py, def viewer_setup method)
 2) Modified the camera view for ant navigation environment (d4rl/locomotion/ant.py, def viewer_setup method under AntEnv class)
