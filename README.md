@@ -2,7 +2,7 @@ This is a custom version of D4RL, modified to suite my work and experiments.
 This list contains the changes I made:
 1) Modified the camera view for point navigation environment (d4rl/pointmaze/maze_model.py, def viewer_setup method)
 2) Modified the camera view for ant navigation environment (d4rl/locomotion/ant.py, def viewer_setup method under AntEnv class)
-3) Fixed the antmaze env to recive a custom goal sampler
+3) Fixed the antmaze env to receive a custom goal sampler
 
 
 D4RL is an open-source benchmark for offline reinforcement learning. It provides standardized environments and datasets for training and benchmarking algorithms. A supplementary [whitepaper](https://arxiv.org/abs/2004.07219) and [website](https://sites.google.com/view/d4rl/home) are also available.
