@@ -134,7 +134,18 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     return self._get_obs()
 
   def viewer_setup(self):
-    self.viewer.cam.distance = self.model.stat.extent * 0.5
+    self.viewer.cam.trackbodyid = 0         # id of the body to track ()
+    self.viewer.cam.distance = self.model.stat.extent * 1         # how much you "zoom in", model.stat.extent is the max limits of the arena
+    self.viewer.cam.lookat[0] += 2.5         # x,y,z offset from the object (works if trackbodyid=-1)
+    self.viewer.cam.lookat[1] += 2.5
+    self.viewer.cam.lookat[2] += 0.5
+    self.viewer.cam.elevation = -90           # camera rotation around the axis in the plane going through the frame origin (if 0 you just see a line)
+    self.viewer.cam.azimuth = 0  
+
+
+  #   self.viewer.cam.distance = self.model.stat.extent * 0.5
+
+
 
   def get_xy(self):
     return self.physics.data.qpos[:2]
@@ -171,6 +182,10 @@ class AntMazeEnv(maze_env.MazeEnv, GoalReachingAntEnv, offline_env.OfflineEnv):
                *args, **kwargs):
     if goal_sampler is None:
       goal_sampler = lambda np_rand: maze_env.MazeEnv.goal_sampler(self, np_rand)
+    # Faisal, Fixed passing a custom goal sampler
+    else:
+      self.goal_sampler = goal_sampler
+      
     maze_env.MazeEnv.__init__(
         self, *args, manual_collision=False,
         goal_sampler=goal_sampler,
