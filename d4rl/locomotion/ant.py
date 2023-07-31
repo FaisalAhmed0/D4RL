@@ -136,8 +136,8 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
   def viewer_setup(self):
     self.viewer.cam.trackbodyid = 0         # id of the body to track ()
     self.viewer.cam.distance = self.model.stat.extent * 1         # how much you "zoom in", model.stat.extent is the max limits of the arena
-    self.viewer.cam.lookat[0] += 2.5         # x,y,z offset from the object (works if trackbodyid=-1)
-    self.viewer.cam.lookat[1] += 2.5
+    self.viewer.cam.lookat[0] += 3.5         # x,y,z offset from the object (works if trackbodyid=-1)
+    self.viewer.cam.lookat[1] += 3.5
     self.viewer.cam.lookat[2] += 0.5
     self.viewer.cam.elevation = -90           # camera rotation around the axis in the plane going through the frame origin (if 0 you just see a line)
     self.viewer.cam.azimuth = 0  
