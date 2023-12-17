@@ -147,9 +147,9 @@ U_MAZE_EVAL = \
 
 OPEN = \
         "#######\\"+\
-        "#OOOOO#\\"+\
-        "#OOOOO#\\"+\
         "#OOOOG#\\"+\
+        "#OOOOO#\\"+\
+        "#OOOOO#\\"+\
         "#######"
 
 # OPEN = \
