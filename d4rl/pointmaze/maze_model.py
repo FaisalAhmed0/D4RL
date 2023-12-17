@@ -148,9 +148,16 @@ U_MAZE_EVAL = \
 OPEN = \
         "#######\\"+\
         "#OOOOO#\\"+\
-        "#OOGOO#\\"+\
         "#OOOOO#\\"+\
+        "#OOOOG#\\"+\
         "#######"
+
+# OPEN = \
+#         "#######\\"+\
+#         "#OOOOO#\\"+\
+#         "#OOOOO#\\"+\
+#         "#OOOOG#\\"+\
+#         "#######"
 
 
 class MazeEnv(mujoco_env.MujocoEnv, utils.EzPickle, offline_env.OfflineEnv):
